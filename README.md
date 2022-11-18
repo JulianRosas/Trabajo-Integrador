@@ -36,8 +36,8 @@ Velez Lautaro  <br>
 
 ## Contacto
 Usuario de Github:
-https://github.com/LautaroVelez
-https://github.com/JulianRosas
-https://github.com/martiarena842
+https://github.com/LautaroVelez <br>
+https://github.com/JulianRosas <br>
+https://github.com/martiarena842 <br>
 https://github.com/francoebner
 
