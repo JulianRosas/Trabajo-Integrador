@@ -1,9 +1,6 @@
 # El Lector
  Proyecto basado en una editorial.
 
-
-
-
 ## Caso de Estudio
 La editorial EL LECTOR trabaja con varios autores que escriben los libros que esta editorial
 pública. De cada autor la editorial registra el nombre, apellido, dirección completa, email,
@@ -16,11 +13,12 @@ completa, teléfono) y su número de CUIL. Un editor se hace responsable de los 
 asignan. Cada editor puede trabajar con diversos autores al mismo tiempo, editando y
 produciendo sus libros; es labor del editor dar a la imprenta la copia final lista para la
 impresión cuando se ha revisado y formado el manuscrito.
-## Solucion Propuesta
 
+## Solucion Propuesta
 La solucion a este proyecto esta basada en crear un programa que facilite 
 la administracion de libros de una editorial, el objetivo de El_Lector es poder tener un control de los distintos libros que tenemos en nuestra editorial.
 Ademas cuenta con una gran descripcion de los datos de los libros que tenemos a disposicion
+
 ## Instalacion
 1. Para poder usar el proyecto, lo primero que debemos hacer es clonar el repositorio en nuestro sistema operativo.
    ``` git clone https://github.com/JulianRosas/Trabajo-Integrador.git ```
@@ -30,11 +28,11 @@ comandos para instalar el proyecto:
 ## Tecnologias usadas
 Este proyecto implementa las tecnologias de: Python, HTML, CSS
 
-##Integrantes
+## Integrantes
 Ebner Franco
 Martiarena Tomas
 Rosas Julian
-Velez Lautaro
+Velez Lautaro 
 
 ## Contacto
 Usuario de Github:
@@ -42,3 +40,4 @@ https://github.com/LautaroVelez
 https://github.com/JulianRosas
 https://github.com/martiarena842
 https://github.com/francoebner
+
