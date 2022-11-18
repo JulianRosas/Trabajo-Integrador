@@ -29,10 +29,10 @@ comandos para instalar el proyecto:
 Este proyecto implementa las tecnologias de: Python, HTML, CSS
 
 ## Integrantes
-Ebner Franco
-Martiarena Tomas
-Rosas Julian
-Velez Lautaro 
+Ebner Franco <br>
+Martiarena Tomas <br>
+Rosas Julian <br> 
+Velez Lautaro  <br>
 
 ## Contacto
 Usuario de Github:
