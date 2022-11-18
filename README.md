@@ -29,6 +29,13 @@ comandos para instalar el proyecto:
     
 ## Tecnologias usadas
 Este proyecto implementa las tecnologias de: Python, HTML, CSS
+
+##Integrantes
+Ebner Franco
+Martiarena Tomas
+Rosas Julian
+Velez Lautaro
+
 ## Contacto
 Usuario de Github:
 https://github.com/LautaroVelez
