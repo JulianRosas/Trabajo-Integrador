@@ -26,7 +26,7 @@ comandos para instalar el proyecto:
 `INCOMPLETO`
     
 ## Tecnologias usadas
-Este proyecto implementa las tecnologias de: Python, HTML, CSS
+Este proyecto implementa las tecnologias de: Python, HTML, CSS, JavaScript, SCSS.
 
 ## Integrantes
 Ebner Franco <br>
@@ -35,9 +35,9 @@ Rosas Julian <br>
 Velez Lautaro  <br>
 
 ## Contacto
-Usuario de Github:
-https://github.com/LautaroVelez <br>
-https://github.com/JulianRosas <br>
+Usuario de Github: <br>
+https://github.com/francoebner <br>
 https://github.com/martiarena842 <br>
-https://github.com/francoebner
+https://github.com/JulianRosas <br>
+https://github.com/LautaroVelez <br>
 
