@@ -12,5 +12,8 @@ def contact(request):
 def single(request):
     return render(request,'single.html')
 
+def login(request):
+   return render(request, 'login.html')
+
 def register(request):
-   return render(request, 'register.html')
+    return render(request, 'register.html')
