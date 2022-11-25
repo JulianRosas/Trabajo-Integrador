@@ -22,4 +22,7 @@ from el_lector import views as v
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('',v.index),
+    path('contact/',v.contact,name='contact'),
+    path('single/', v.single, name='single'),
+    path('register/',v.register, name='register'),
 ]
