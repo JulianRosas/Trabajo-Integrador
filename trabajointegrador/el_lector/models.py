@@ -3,18 +3,21 @@ from django.db import models
 
 # Create your models here.
 class Pais(models.Model):
+    id = models.IntegerField(primary_key=True)
     nombre = models.CharField("nombre",max_length=30)
     descripcion = models.CharField("descripcion",max_length=30)
     def __str__(self):
         return self.nombre
 
 class Tipo_documento(models.Model):
+    id = models.IntegerField(primary_key=True)
     nombre = models.CharField("nombre",max_length=15)
     descripcion = models.CharField("descripcion",max_length=30)
     def __str__(self):
         return self.nombre
 
 class Domicilio(models.Model):
+    id = models.IntegerField(primary_key=True)
     calle = models.CharField("calle",max_length=15)
     altura = models.IntegerField("altura")
     localidad = models.CharField("localidad",max_length=20)
@@ -25,6 +28,7 @@ class Domicilio(models.Model):
         return texto.format(self.calle, self.altura)
 
 class Genero(models.Model):
+    id = models.IntegerField(primary_key=True)
     nombre = models.CharField("nombre",max_length=15)
     descripcion = models.CharField("descripcion",max_length=30)
     def __str__(self):
@@ -32,6 +36,7 @@ class Genero(models.Model):
 
 
 class Imprenta(models.Model):
+    id = models.IntegerField(primary_key=True)
     nombre = models.CharField("nombre",max_length=15)
     telefono = models.IntegerField
     sitio_web = models.URLField("web",max_length=40)
@@ -41,6 +46,7 @@ class Imprenta(models.Model):
         return self.nombre
 
 class Persona(models.Model):
+    id = models.IntegerField(primary_key=True)
     nombre = models.CharField("nombre",max_length=30)
     apellido = models.CharField("apellido",max_length=30)
     telefono = models.IntegerField
