@@ -342,6 +342,11 @@ progress {
   -webkit-appearance: button;
 }
 
+html{
+  scroll-behavior: smooth;
+  scrollbar-darkshadow-color: #000;
+}
+
 output {
   display: inline-block;
 }

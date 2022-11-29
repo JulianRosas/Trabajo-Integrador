@@ -9,11 +9,17 @@ def index(request):
 def contact(request):
     return render(request,'contact.html')
 
-def single(request):
-    return render(request,'single.html')
+def addbook(request):
+    return render(request,'addbook.html')
 
 def login(request):
    return render(request, 'login.html')
 
 def register(request):
     return render(request, 'register.html')
+
+def books(request):
+    return render(request, 'books.html')
+
+def booklist(request):
+    return render(request, 'booklist.html')
