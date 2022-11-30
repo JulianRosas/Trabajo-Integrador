@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -39,6 +40,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "el_lector",
 ]
+JAZZMIN_SETTINGS = {
+    "site_logo": "",
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
