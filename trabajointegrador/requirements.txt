@@ -3,3 +3,4 @@ Django==4.1.1
 mysql==0.0.3
 mysqlclient==2.1.1
 sqlparse==0.4.2
+jazzmin== 2.6.0
