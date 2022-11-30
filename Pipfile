@@ -7,7 +7,6 @@ name = "pypi"
 asgiref = "==3.5.2"
 django = "==4.1.1"
 sqlparse = "==0.4.2"
-jazzmin = "==2.6.0"
 
 [dev-packages]
 
