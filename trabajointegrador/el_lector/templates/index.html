@@ -64,33 +64,8 @@
     </div>
     <!-- Topbar End -->
 
-
-    <!-- Navbar Start -->
-    <div class="container-fluid">
-        <div class="row border-top px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none" data-toggle="collapse" href="{%static '#navbar-vertical'%}" style="height: 67px; padding: 0 30px;">
-                    <h5 class="text-primary m-0"><i class="fa fa-book-open mr-2"></i>Subjects</h5>
-                    <i class="fa fa-angle-down text-primary"></i>
-                </a>
-                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 9;">
-                    <div class="navbar-nav w-100">
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Web Design <i class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="" class="dropdown-item">HTML</a>
-                                <a href="" class="dropdown-item">CSS</a>
-                                <a href="" class="dropdown-item">jQuery</a>
-                            </div>
-                        </div>
-                        <a href="" class="nav-item nav-link">Apps Design</a>
-                        <a href="" class="nav-item nav-link">Marketing</a>
-                        <a href="" class="nav-item nav-link">Research</a>
-                        <a href="" class="nav-item nav-link">SEO</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="col-lg-9">
+<div class="text-center">
+            <div class="col-lg-12">
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                     <a href="" class="text-decoration-none d-block d-lg-none">
                         <h1 class="m-0"><span class="text-primary">THE</span>LECTOR</h1>
@@ -101,11 +76,12 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav py-0" >
                             
-                            <a href="{% static 'index.html'%}" class="nav-item nav-link active">Home</a>
+                            <a href="http://127.0.0.1:8000/" class="nav-item nav-link active">Home</a>
                             <a href="#section1" class="nav-item nav-link" style="margin-left: 50px;">About Us</a>
                             <a href="{% static 'course.html'%}" class="nav-item nav-link" style="margin-left: 50px;">Vemos</a>
                            
                             <div class="nav-item dropdown">
+                        
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="margin-left: 50px;">Books</a>
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <a href="http://127.0.0.1:8000/booklist" class="dropdown-item">Books List</a>
@@ -119,6 +95,7 @@
             </div>
         </div>
     </div>
+</div>
     <!-- Navbar End -->
 
 
@@ -135,12 +112,20 @@
                     <img class="position-relative w-100" src="{%static 'img/carousel-1.jpg'%}" style="min-height: 300px; object-fit: cover;">
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
                         <div class="p-5" style="width: 100%; max-width: 900px;">
-                            <h1 class="display-3 text-white mb-md-4">The Lector</h1>
+                            <h1 class="display-3 text-white mb-md-4">The Lector,
+                                <span
+                                   class="txt-rotate"
+                                   data-period="1500"
+                                   data-rotate='[ "simple", "fast", "pretty", "serious", "fun!" ]'></span>
+                              </h1>
+                            
                             <h5 class="text-white text-uppercase mb-md-3">Ready to publish your dreams?</h5>
                             <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="carousel-item" style="min-height: 300px;">
                     <img class="position-relative w-100" src="{%static 'img/carousel-2.jpg'%}" style="min-height: 300px; object-fit: cover;">
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
@@ -151,6 +136,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div class="carousel-item" style="min-height: 300px;">
                     <img class="position-relative w-100" src="{%static 'img/carousel-3.jpg'%}" style="min-height: 300px; object-fit: cover;">
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
@@ -198,7 +185,7 @@
         <div class="container pt-5 pb-3">
             <div class="text-center mb-5">
                 <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Subjects</h5>
-                <h1>Explore Top Subjects</h1>
+                <h1>Explore Top Books</h1>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
