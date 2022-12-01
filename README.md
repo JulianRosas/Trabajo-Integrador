@@ -23,10 +23,10 @@ Ademas cuenta con una gran descripcion de los datos de los libros que tenemos a 
 1. Para poder usar el proyecto, lo primero que debemos hacer es clonar el repositorio en nuestro sistema operativo.
    ``` git clone https://github.com/JulianRosas/Trabajo-Integrador.git ```
 comandos para instalar el proyecto:
-`INCOMPLETO`
+``` pip install ./requirements.txt ```
     
 ## Tecnologias usadas
-Este proyecto implementa las tecnologias de: Python, HTML, CSS, JavaScript, SCSS.
+Este proyecto implementa las tecnologias de: Python, HTML, CSS, JavaScript, SCSS, PHP.
 
 ## Integrantes
 Ebner Franco <br>
