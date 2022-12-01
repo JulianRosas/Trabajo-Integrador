@@ -4,6 +4,7 @@
 
 <!-- ESTA DEBERIA SER LA PAGINA DE CADA LIBRO! -----------------CAPAZ COMPLETAR------------ SEGURAMENTE NO XD-->
 <head>
+    {% load static %}
     <meta charset="utf-8">
     <title>The Lector</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -166,42 +167,46 @@
                         <h1 class="m-0">Ingrese un libro</h1>
                     </div>
                     <div class="card-body rounded-bottom bg-primary p-5">
-                        <form>
+                        <form action="{ % url 'addbook' % }" method="POST">  {%csrf_token%}
+                            
+
                             <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Titulo" required="required" />
+                                <input type="text" class="form-control border-0 p-4" placeholder="Titulo" required="required" name="titulo"/>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="IBSN" required="required" />
+                                <input type="number" class="form-control border-0 p-4" placeholder="isbn" required="required" name="isbn"/>
                             </div>
                             <div class="form-group">
-                                <select class="custom-select border-0 px-4" style="height: 47px;">
-                                    <option selected>Seleccione un Autor</option>
-                                    <option value="1">Course 1</option>
-                                    <option value="2">Course 1</option>
-                                    <option value="3">Course 1</option>
+                                <input type="number" class="form-control border-0 p-4" placeholder="Cantidad de Paginas" required="required" name="cant_paginas"/>
+                                 </div>
+
+
+                            <div class="form-group">
+                                <select class="custom-select border-0 px-4" style="height: 47px;" name="id_autor">
+                                    {% for a in autores %}
+                                    <option value="{{ a.nro_documento }}">{{ a.apellido }}</option>
+                                    {% endfor %}
+                                  
                                 </select>
                             </div>
                             
-                            
                             <div class="form-group">
-                                <select class="custom-select border-0 px-4" style="height: 47px;">
-                                    <option selected>Seleccione una imprenta</option>
-                                    <option value="1">Course 1</option>
-                                    <option value="2">Course 1</option>
-                                    <option value="3">Course 1</option>
+                                <select class="custom-select border-0 px-4" style="height: 47px;" name="id_imprenta">
+                                    {% for i in imprentas %}
+                                    <option value="{{ i.id }}">{{ i.nombre }}</option>
+                                    {% endfor %}
+                                   
                                 </select>
                             </div>
 
-                            <div class="form-group">
-                           <input type="text" class="form-control border-0 p-4" placeholder="Cantidad de Paginas" required="required" />
-                            </div>
+                            
 
                             <div class="form-group">     
-                                <textarea placeholder="Reseña" rows="5" class="form-control border-0 p-4">   </textarea>
+                                <textarea placeholder="Reseña" rows="5" class="form-control border-0 p-4" name="resena">   </textarea>
                             </div>
 
                             <div>
-                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Sign Up Now</button>
+                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Añadir</button>
                             </div>
                         </form>
                     </div>
