@@ -22,7 +22,8 @@ Ademas cuenta con una gran descripcion de los datos de los libros que tenemos a 
 ## Instalacion
 1. Para poder usar el proyecto, lo primero que debemos hacer es clonar el repositorio en nuestro sistema operativo.
    ``` git clone https://github.com/JulianRosas/Trabajo-Integrador.git ```
-comandos para instalar el proyecto:
+2. Debemos activar el entorno virtual, primero hay q ir a la carpeta Trabajo-Integrador y ahi escribir en la consola ```pipenv shell```, si el entorno virtual fue aplicado con exito te debera aparecer en la consola (Trabajo-Integrador) a la izquierda de tu usuario
+3. Por ultimo debemos instalar las librerias que usa el proyecto, para realizar esto debemos poner lo siguiente en la consola:
 ``` pip install ./requirements.txt ```
     
 ## Tecnologias usadas
