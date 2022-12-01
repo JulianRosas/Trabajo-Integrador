@@ -28,7 +28,10 @@ def books(request):
 
 
 def booklist(request):
-    return render(request, 'booklist.html')
+    libros=Libro.objects.all( )
+
+
+    return render(request, 'booklist.html',context={"libros":libros}   )
 
 
 def addbook_view(request):
@@ -38,7 +41,7 @@ def addbook_view(request):
     return render(request, 'addbook.html', context={"autores": autores, "imprentas": imprentas})
 
 
-def addbook(request):
+def addbook(request):       
     print(f"---{request.POST}---")
 
     autor = Autor.objects.filter(nro_documento=int(request.POST['id_autor']))
