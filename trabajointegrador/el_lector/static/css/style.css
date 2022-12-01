@@ -341,20 +341,10 @@ progress {
   font: inherit;
   -webkit-appearance: button;
 }
-/* CSS MIOO*/ 
+
 html{
   scroll-behavior: smooth;
   scrollbar-darkshadow-color: #000;
-}
-
-.text-center{
-  text-align: center;
-  position:static;
-}
-
-.txt-rotate{
-  color: white;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 output {
