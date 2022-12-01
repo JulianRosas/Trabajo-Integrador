@@ -158,12 +158,15 @@
 
                     <div class="col-lg-6 mb-4">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                            
                             <img class="img-fluid" src="{% static 'img/blog-1.jpg' %}" alt="">
+                            
                             <a class="blog-overlay text-decoration-none" href="">
-                                <h5 class="text-white mb-3">{{ l.titulo }} </h5>
+                                <p style=" margin-bottom: 220px;color: rgb(255, 255, 255);" >{{ l.isbn }}</p> 
+                                <h5 class="text-white mb-3"  > {{ l.titulo }} </h5>
                                 <p>{{ l.id_autor.apellido }} </p>
 
-                                <p>Publisher: {{ l.id_imprenta }} </p>
+                                <p style="margin-left: auto;color: rgb(124, 116, 116);" > {{ l.id_imprenta }} </p>
                             </a>
 
                         </div>
@@ -250,8 +253,8 @@
                 <div class="mb-5">
                     <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Tag Cloud</h3>
                     <div class="d-flex flex-wrap m-n1">
-                        <a href="" class="btn btn-outline-primary m-1">Design</a>
-                        <a href="" class="btn btn-outline-primary m-1">Development</a>
+                        <a href="" class="btn btn-outline-primary m-1">Adventure</a>
+                        <a href="" class="btn btn-outline-primary m-1">Science fiction</a>
                         <a href="" class="btn btn-outline-primary m-1">Marketing</a>
                         <a href="" class="btn btn-outline-primary m-1">SEO</a>
                         <a href="" class="btn btn-outline-primary m-1">Writing</a>

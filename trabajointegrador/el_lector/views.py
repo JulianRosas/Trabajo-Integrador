@@ -58,7 +58,7 @@ def addbook(request):
                       cant_paginas=cant_paginas
                       )
     new_libro.save()
-    return render(request, 'success.html')
+    return render(request, 'addbook.html')
 
 # isbn = models.IntegerField(primary_key=True)
 # titulo = models.CharField("titulo",max_length=30)

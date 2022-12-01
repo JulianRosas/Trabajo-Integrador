@@ -24,6 +24,6 @@ urlpatterns = [
     path('addbook/', v.addbook_view, name='addbook_view'),
     path('register/', v.register, name='register'),
     path('booklist/', v.booklist, name='booklist'),
-    path('success/', v.addbook, name="addbook")
+    path('index/', v.addbook, name="addbook")
 
 ]
