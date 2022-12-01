@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [("el_lector", "0002_alter_domicilio_piso")]
 
     operations = [
