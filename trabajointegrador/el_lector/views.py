@@ -46,8 +46,7 @@ def addbook_view(request):
 
 
 def addbook(request):
-    autores = Autor.objects.all()
-    imprentas = Imprenta.objects.all()
+    
     print(f"---{request.POST}---")
 
 
@@ -64,8 +63,7 @@ def addbook(request):
     new_libro = Libro(isbn=isbn, titulo=titulo, resena=resena, id_autor=id_autor, id_imprenta=id_imprenta, cant_paginas=cant_paginas
                       )
     new_libro.save()
-    return render(request,'success.html',context={"autores": autores, "imprentas": imprentas})
-
+    return render(request,'success.html')
 
 #isbn = models.IntegerField(primary_key=True)
     # titulo = models.CharField("titulo",max_length=30)
