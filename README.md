@@ -24,7 +24,7 @@ Ademas cuenta con una gran descripcion de los datos de los libros que tenemos a 
    ``` git clone https://github.com/JulianRosas/Trabajo-Integrador.git ```
 2. Debemos activar el entorno virtual, primero hay q ir a la carpeta Trabajo-Integrador y ahi escribir en la consola ```pipenv shell```, si el entorno virtual fue aplicado con exito te debera aparecer en la consola (Trabajo-Integrador) a la izquierda de tu usuario
 3. Por ultimo debemos instalar las librerias que usa el proyecto, para realizar esto debemos poner lo siguiente en la consola:
-``` pip install ./requirements.txt ```
+``` pip install -r requirements.txt ```
     
 ## Tecnologias usadas
 Este proyecto implementa las tecnologias de: Python, HTML, CSS, JavaScript, SCSS, PHP.
