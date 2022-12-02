@@ -347,6 +347,11 @@ html{
   scrollbar-darkshadow-color: #000;
 }
 
+.subtitulo{
+    color: white;
+    
+}
+
 output {
     display: inline-block;
 }
