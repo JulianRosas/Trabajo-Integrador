@@ -17,12 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from el_lector import views as v
 
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', v.index_view, name="index"),
     path('login/', v.login, name='login'),
     path('addbook/', v.addbook_view, name='addbook_view'),
-    path('register/', v.register, name='register'),
     path('booklist/', v.booklist, name='booklist'),
     path('success/', v.addbook, name="addbook")
 
