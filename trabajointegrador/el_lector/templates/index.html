@@ -30,7 +30,7 @@
     <div class="row align-items-center py-4 px-xl-5">
         <div class="col-lg-3">
             <a href="http://127.0.0.1:8000/" class="text-decoration-none">
-                <img src="{% static 'img/favicon.png' %}" height: 5px, width: 5px;>
+                <img src="{% static 'img/favicon.jpeg' %}" style="height: 80px" width="200px">
             </a>
         </div>
         <div class="col-lg-3 text-right">
@@ -38,7 +38,7 @@
                 <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
                 <div class="text-left">
                     <h6 class="font-weight-semi-bold mb-1">Our Office</h6>
-                    <small>Republica de China s/n. Cordoba, Argentina</small>
+                    <small>Donaciano del Campillo 1640, Cordoba, Argentina </small>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
                 <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
                 <div class="text-left">
                     <h6 class="font-weight-semi-bold mb-1">Email Us</h6>
-                    <small>editorialector@gmail.com</small>
+                    <small>thelector@gmail.com</small>
                 </div>
             </div>
         </div>
@@ -81,8 +81,8 @@
                         <div class="navbar-nav py-0" >
                             
                             <a href="{% static 'index.html'%}" class="nav-item nav-link active">Home</a>
-                            <a href="#section1" class="nav-item nav-link" style="margin-left: 50px;">Learnings</a>
-                            <a href="{% static 'course.html'%}" class="nav-item nav-link" style="margin-left: 50px;">Vemos</a>
+                            <a href="#section1" class="nav-item nav-link" style="margin-left: 50px;">Opinions</a>
+                            <a href="#section2" class="nav-item nav-link" style="margin-left: 50px;">News</a>
                            
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="margin-left: 50px;">Books</a>
@@ -116,7 +116,14 @@
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
                         <div class="p-5" style="width: 100%; max-width: 900px;">
                             <h1 class="display-3 text-white mb-md-4">The Lector</h1>
-                            <h5 class="text-white text-uppercase mb-md-3">Ready to publish your dreams?</h5>
+
+                            <h5 class="subtitulo">
+                                <span
+                                   class="txt-rotate"
+                                   data-period="2000"
+                                   data-rotate='[ "Ready to publish your dreams?" ]'></span>
+                              </h5>
+
                             <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
                         </div>
                     </div>
@@ -126,7 +133,13 @@
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
                         <div class="p-5" style="width: 100%; max-width: 900px;">
                             <h1 class="display-3 text-white mb-md-4">The Lector</h1>
-                            <h5 class="text-white text-uppercase mb-md-3">Were dreams come true</h5>
+                            <h5 class="subtitulo">
+                                <span
+                                   class="txt-rotate"
+                                   data-period="2000"
+                                   data-rotate='[ "Were dreams come true" ]'></span>
+                              </h5>
+
                             <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
                         </div>
                     </div>
@@ -138,7 +151,13 @@
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
                         <div class="p-5" style="width: 100%; max-width: 900px;">
                             <h1 class="display-3 text-white mb-md-4">The Lector</h1>
-                            <h5 class="text-white text-uppercase mb-md-3">New Way To Read From Home</h5>
+                            <h5 class="subtitulo">
+                                <span
+                                   class="txt-rotate"
+                                   data-period="2000"
+                                   data-rotate='[ "New Way To Read From Home" ]'></span>
+                              </h5>
+                         
                             <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
                         </div>
                     </div>
@@ -149,8 +168,151 @@
 </div>
 <!-- Carousel End -->
 
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a>
+{% endif %}
+{% endblock %}
 
-<!-- About Start -->
+<!-- Blog Start -->
+<div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-5">
+            <h1 id="section2">Latest From Our Blog</h1>
+        </div>
+        <div class="row pb-3">
+            <div class="col-lg-4 mb-4">
+                <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="{% static 'img/blog-1.jpg' %}" alt="">
+                    <a class="blog-overlay text-decoration-none" href="">
+                        <h5 class="text-white mb-3">The publication of "The Lord of the Rings" caused controversy in Argentina. The book had more than 50000 visits in 2 days</h5>
+                        <p class="text-primary m-0">Jan 21, 2022</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="{% static 'img/libros.jpg' %}" width="9000">
+                    <a class="blog-overlay text-decoration-none" href="">
+                        <h5 class="text-white mb-3">in the last week, the use of the platform has increased by 50% with a worlwide audience</h5>
+                        <p class="text-primary m-0">Dec 10, 2022</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="{% static 'img/blog-3.jpg' %}" alt="">
+                    <a class="blog-overlay text-decoration-none" href="">
+                        <h5 class="text-white mb-3">More than 1000 positive reviews from users around the world</h5>
+                        <p class="text-primary m-0">Jun 04, 2022</p>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4 mb-4">
+                <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="{% static 'img/libros.jpg' %}" width="9000">
+                    <a class="blog-overlay text-decoration-none" href="">
+                        <h5 class="text-white mb-3">in the last week, the use of the platform has increased by 50% with a worlwide audience</h5>
+                        <p class="text-primary m-0">Dec 10, 2022</p>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 mb-4">
+                <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="{% static 'img/blog-3.jpg' %}" alt="">
+                    <a class="blog-overlay text-decoration-none" href="">
+                        <h5 class="text-white mb-3">More than 1000 positive reviews from users around the world</h5>
+                        <p class="text-primary m-0">Jun 04, 2022</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="{% static 'img/libros.jpg' %}" width="9000">
+                    <a class="blog-overlay text-decoration-none" href="">
+                        <h5 class="text-white mb-3">in the last week, the use of the platform has increased by 50% with a worlwide audience</h5>
+                        <p class="text-primary m-0">Dec 10, 2022</p>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        
+    </div>
+
+
+    </div>
+</div>
+<!-- Blog End -->
+
+
+
+<!-- Courses Start -->
+<!-- Aca estaba : OUR COURSES, borre todo-->
+<!-- Courses End -->
+
+
+<!-- Registration Start -->
+<!-- Registration End -->
+
+
+
+
+
+<!-- Testimonial Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Testimonials</h5>
+            <h1>Some opinions from our clients</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-normal mb-4">Beautiful place, the adaptation to the library was really perfect. It is ideal for viewing books, taking photos, or taking photos of the place. Admission is free and you have thousands and thousands of books to see, browse and buy.</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/franco.jpg' %}" alt="">
+                        <h5 class="m-0">Franco</h5>
+                        <span>Joined in 2021</span>
+                    </div>
+
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-normal mb-4">Really very impressive, great variety of books, sector for Children's Books, in the background it has a bar where you can read and drink coffee, the place is very calm</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/guille.jpeg' %}" alt="">
+                        <h5 class="m-0"> Guillermo</h5>
+                        <span>Joined in 2022</span>
+                    </div>
+
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-normal mb-4">I have no words to describe the feeling of the place. It is beautiful, an infrastructure so well maintained over time. All kinds of books, various varieties. There is even a section for children.</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/carran.jpeg' %}" alt="">
+                        <h5 class="m-0">Santiago</h5>
+                        <span>Joined in 2020</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+
+<!-- Our phylosophy -->
 <div class="container-fluid py-5">
     <div class="container py-5">
         <div class="row align-items-center">
@@ -169,22 +331,12 @@
                     This ability is not available to everyone, most people prefer to see a simple summary of the text
                     In this sense, we invite you not to depend only on the summaries that you can find in blogs, web pages, tutorials...
                     There are authors who have a lot to teach, if you start reading you can learn much more.</p>
-                <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+                
             </div>
         </div>
     </div>
 </div>
-<!-- About End -->
-
-
-<!-- Courses Start -->
-<!-- Aca estaba : OUR COURSES, borre todo-->
-<!-- Courses End -->
-
-
-<!-- Registration Start -->
-<!-- Registration End -->
-
+<!-- Our Phylosophy -->
 
 <!-- Team Start -->
 <div class="container-fluid py-5">
@@ -263,125 +415,8 @@
 </div>
 <!-- Team End -->
 
-
-<!-- Testimonial Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="text-center mb-5">
-            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Testimonials</h5>
-            <h1>Some opinions...</h1>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="text-center">
-                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                        <h4 class="font-weight-normal mb-4">Beautiful place, the adaptation to the library was really perfect. It is ideal for viewing books, taking photos, or taking photos of the place. Admission is free and you have thousands and thousands of books to see, browse and buy.</h4>
-                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/testimonial-1.jpg' %}" alt="">
-                        <h5 class="m-0">Jhon</h5>
-                        <span>Joined in 2021</span>
-                    </div>
-                    <div class="text-center">
-                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                        <h4 class="font-weight-normal mb-4">Really very impressive, great variety of books, sector for Children's Books, in the background it has a bar where you can read and drink coffee, the place is very calm</h4>
-                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/mujer.jpg' %}" alt="">
-                        <h5 class="m-0"> Jennie</h5>
-                        <span>Joined in 2022</span>
-                    </div>
-                    <div class="text-center">
-                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                        <h4 class="font-weight-normal mb-4">I have no words to describe the feeling of the place. It is beautiful, an infrastructure so well maintained over time. All kinds of books, various varieties. There is even a section for children.</h4>
-                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/testimonial-3.jpg' %}" alt="">
-                        <h5 class="m-0">William</h5>
-                        <span>Joined in 2020</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
-
-
-<!-- Blog Start -->
-<div class="container-fluid py-5">
-    <div class="container pt-5 pb-3">
-        <div class="text-center mb-5">
-            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Our Blog</h5>
-            <h1>Latest From Our Blog</h1>
-        </div>
-        <div class="row pb-3">
-            <div class="col-lg-4 mb-4">
-                <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{% static 'img/blog-1.jpg' %}" alt="">
-                    <a class="blog-overlay text-decoration-none" href="">
-                        <h5 class="text-white mb-3">The publication of "The Lord of the Rings" caused controversy in Argentina. The book had more than 50000 visits in 2 days</h5>
-                        <p class="text-primary m-0">Jan 21, 2022</p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{% static 'img/libros.jpg' %}" width="9000">
-                    <a class="blog-overlay text-decoration-none" href="">
-                        <h5 class="text-white mb-3">in the last week, the use of the platform has increased by 50% with a worlwide audience</h5>
-                        <p class="text-primary m-0">Dec 10, 2022</p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{% static 'img/blog-3.jpg' %}" alt="">
-                    <a class="blog-overlay text-decoration-none" href="">
-                        <h5 class="text-white mb-3">More than 1000 positive reviews from users around the world</h5>
-                        <p class="text-primary m-0">Jun 04, 2022</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Blog End -->
-
-
 <!-- Footer Start -->
-<div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
-    <div class="row pt-5">
-        <div class="col-lg-7 col-md-12">
-            <div class="row">
-                <div class="col-md-6 mb-5" style="margin-left: 500px;">
-                    <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Contactanos</h5>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>123 calle ,Cordoba,Argentina</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>+54 345 67890</p>
-                    <p><i class="fa fa-envelope mr-2"></i>libreria@itsv.edu.com.ar
-                    </p>
-                    <div class="d-flex justify-content-start mt-4">
-                        <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-5">
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-5 col-md-12 mb-5" style="margin-left: -100px;">
-            <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get The Lector latest news</h5>
-            
-            <div class="w-100">
-                <div class="input-group" style="margin-top: 50px; margin-left: -100px;" >
-                    <input type="text" class="form-control border-light" style="padding: 30px;"
-                           placeholder="Your Email Address">
-                    <div class="input-group-append">
-                        <button  class="btn btn-primary px-4">Sign Up</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
      style="border-color: rgba(256, 256, 256, .1) !important;">
     <div class="row">
@@ -389,22 +424,15 @@
             <p class="m-0 text-white">&copy; <a href="#">The Lector</a>. Todos los derechos reservados. </a>
             </p>
         </div>
-        <div class="col-lg-6 text-center text-md-right">
+        <div class="col-lg-10 text-md-left">
             <ul class="nav d-inline-flex">
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">Privacidad</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">Terminos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">FAQs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">Ayuda</a>
-                </li>
+                <input type="text" class="form-control border-light" style="padding: 20px;" placeholder="Your Opinion">
             </ul>
         </div>
+        <div class="col-lg-9">
+            <ul class="nav d-inline-flex">
+                <button class="btn btn-primary px-4" onclick="mostrar()" style="padding:10px">Send</button>
+            </ul>
     </div>
 </div>
 <!-- Footer End -->

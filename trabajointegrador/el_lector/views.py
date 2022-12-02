@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.db.models import Q
 from .models import Autor, Libro, Imprenta
 
 
@@ -29,8 +29,13 @@ def books(request):
 
 def booklist(request):
     libros=Libro.objects.all( )
-
-
+    queryset = request.GET.get("buscar")
+    if queryset:
+        libros = Libro.objects.filter(
+            Q(titulo = queryset) 
+        )
+        
+        
     return render(request, 'booklist.html',context={"libros":libros}   )
 
 
