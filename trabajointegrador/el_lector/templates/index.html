@@ -93,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="http://127.0.0.1:8000/login">Log
+                    <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="http://127.0.0.1:8000/admin">Log
                         In</a>
                 </div>
             </nav>
@@ -123,8 +123,6 @@
                                    data-period="2000"
                                    data-rotate='[ "Ready to publish your dreams?" ]'></span>
                               </h5>
-
-                            <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -139,8 +137,6 @@
                                    data-period="2000"
                                    data-rotate='[ "Were dreams come true" ]'></span>
                               </h5>
-
-                            <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -157,8 +153,6 @@
                                    data-period="2000"
                                    data-rotate='[ "New Way To Read From Home" ]'></span>
                               </h5>
-                         
-                            <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -167,15 +161,6 @@
     </div>
 </div>
 <!-- Carousel End -->
-
-{% block content %}
-{% if user.is_authenticated %}
-  Hi {{ user.username }}!
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
-{% endif %}
-{% endblock %}
 
 <!-- Blog Start -->
 <div class="container-fluid py-5">
@@ -186,7 +171,7 @@
         <div class="row pb-3">
             <div class="col-lg-4 mb-4">
                 <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{% static 'img/blog-1.jpg' %}" alt="">
+                    <img class="img-fluid" src="{% static 'img/ring.jpg' %}" alt="">
                     <a class="blog-overlay text-decoration-none" href="">
                         <h5 class="text-white mb-3">The publication of "The Lord of the Rings" caused controversy in Argentina. The book had more than 50000 visits in 2 days</h5>
                         <p class="text-primary m-0">Jan 21, 2022</p>
@@ -195,16 +180,16 @@
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{% static 'img/libros.jpg' %}" width="9000">
+                    <img class="img-fluid" src="{% static 'img/actividad.jpg' %}" width="9000">
                     <a class="blog-overlay text-decoration-none" href="">
                         <h5 class="text-white mb-3">in the last week, the use of the platform has increased by 50% with a worlwide audience</h5>
-                        <p class="text-primary m-0">Dec 10, 2022</p>
+                        <p class="text-primary m-0">Nov 30, 2022</p>
                     </a>
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{% static 'img/blog-3.jpg' %}" alt="">
+                    <img class="img-fluid" src="{% static 'img/bookshelf.jpg' %}" alt="">
                     <a class="blog-overlay text-decoration-none" href="">
                         <h5 class="text-white mb-3">More than 1000 positive reviews from users around the world</h5>
                         <p class="text-primary m-0">Jun 04, 2022</p>
@@ -215,10 +200,10 @@
             
             <div class="col-lg-4 mb-4">
                 <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{% static 'img/libros.jpg' %}" width="9000">
+                    <img class="img-fluid" src="{% static 'img/books1.jpg' %}" width="9000">
                     <a class="blog-overlay text-decoration-none" href="">
-                        <h5 class="text-white mb-3">in the last week, the use of the platform has increased by 50% with a worlwide audience</h5>
-                        <p class="text-primary m-0">Dec 10, 2022</p>
+                        <h5 class="text-white mb-3">Tennessee gives books to young students to encourage reading</h5>
+                        <p class="text-primary m-0">Dec 1, 2022</p>
                     </a>
                 </div>
             </div>
@@ -226,17 +211,17 @@
 
             <div class="col-lg-4 mb-4">
                 <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{% static 'img/blog-3.jpg' %}" alt="">
+                    <img class="img-fluid" src="{% static 'img/readingirl.jpg' %}" alt="">
                     <a class="blog-overlay text-decoration-none" href="">
-                        <h5 class="text-white mb-3">More than 1000 positive reviews from users around the world</h5>
-                        <p class="text-primary m-0">Jun 04, 2022</p>
+                        <h5 class="text-white mb-3">Michelle Zauner: 'I've reread Marilynne Robinson's Housekeeping a hundred times'</h5>
+                        <p class="text-primary m-0">Nov 26, 2022</p>
                     </a>
                 </div>
             </div>
 
             <div class="col-lg-4 mb-4">
                 <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{% static 'img/libros.jpg' %}" width="9000">
+                    <img class="img-fluid" src="{% static 'img/bookshelf2.jpg' %}" width="9000">
                     <a class="blog-overlay text-decoration-none" href="">
                         <h5 class="text-white mb-3">in the last week, the use of the platform has increased by 50% with a worlwide audience</h5>
                         <p class="text-primary m-0">Dec 10, 2022</p>
@@ -284,8 +269,8 @@
                     <div class="text-center">
                         <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
                         <h4 class="font-weight-normal mb-4">Beautiful place, the adaptation to the library was really perfect. It is ideal for viewing books, taking photos, or taking photos of the place. Admission is free and you have thousands and thousands of books to see, browse and buy.</h4>
-                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/franco.jpg' %}" alt="">
-                        <h5 class="m-0">Franco</h5>
+                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/carran.jpeg' %}" alt="">
+                        <h5 class="m-0">Santiago</h5>
                         <span>Joined in 2021</span>
                     </div>
 
@@ -300,8 +285,8 @@
                     <div class="text-center">
                         <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
                         <h4 class="font-weight-normal mb-4">I have no words to describe the feeling of the place. It is beautiful, an infrastructure so well maintained over time. All kinds of books, various varieties. There is even a section for children.</h4>
-                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/carran.jpeg' %}" alt="">
-                        <h5 class="m-0">Santiago</h5>
+                        <img class="img-fluid mx-auto mb-3" src="{% static 'img/morales.jpg' %}" alt="">
+                        <h5 class="m-0">Franco</h5>
                         <span>Joined in 2020</span>
                     </div>
                 </div>
